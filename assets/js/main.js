@@ -388,32 +388,6 @@
 			}
 
 
-			function openNewTab() {
-				const newTab = window.open('about:blank', '_blank'); // Open a blank new tab
-				if (!newTab) { // Check if the tab failed to open
-					alert("Pop-ups are blocked. Please allow pop-ups in your browser settings.");
-					return;
-				}
-				const content = `
-					<html>
-					<head>
-						<title>My Project</title>
-						<style>
-							body { font-family: Arial, sans-serif; text-align: center; padding: 2rem; }
-							h1 { color: #3498db; }
-						</style>
-					</head>
-					<body>
-						<h1>Welcome to My Project</h1>
-						<p>Customize this content to suit your needs.</p>
-					</body>
-					</html>
-				`;
-				newTab.document.write(content); // Write the HTML content into the new tab
-				newTab.document.close(); // Close the document to finish writing
-			}
-			
-
 		// Initialize.
 
 			// Hide main, articles.
