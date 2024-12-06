@@ -362,6 +362,29 @@
 
 			});
 
+			function openNewTab() {
+				const newTab = window.open('about:blank', '_blank');
+				const content = `
+					<html>
+					<head>
+						<title>My Project</title>
+						<style>
+							body { font-family: Arial, sans-serif; text-align: center; padding: 2rem; }
+							h1 { color: #3498db; }
+						</style>
+					</head>
+					<body>
+						<h1>Welcome to My Project</h1>
+						<p>Customize this content to suit your needs.</p>
+					</body>
+					</html>
+				`;
+				newTab.document.write(content);
+				newTab.document.close();
+			}
+			
+			
+
 		// Scroll restoration.
 		// This prevents the page from scrolling back to the top on a hashchange.
 			if ('scrollRestoration' in history)
