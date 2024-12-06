@@ -389,7 +389,11 @@
 
 
 			function openNewTab() {
-				const newTab = window.open('about:blank', '_blank');
+				const newTab = window.open('about:blank', '_blank'); // Open a blank new tab
+				if (!newTab) { // Check if the tab failed to open
+					alert("Pop-ups are blocked. Please allow pop-ups in your browser settings.");
+					return;
+				}
 				const content = `
 					<html>
 					<head>
@@ -405,9 +409,10 @@
 					</body>
 					</html>
 				`;
-				newTab.document.write(content);
-				newTab.document.close();
+				newTab.document.write(content); // Write the HTML content into the new tab
+				newTab.document.close(); // Close the document to finish writing
 			}
+			
 
 		// Initialize.
 
